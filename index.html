@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Text-to-Image Generator</title>
+</head>
+<body>
+    <h1>Text-to-Image Generator</h1>
+    <form method="POST">
+        <label for="prompt">Enter your prompt:</label>
+        <input type="text" id="prompt" name="prompt" required>
+        <button type="submit">Generate Image</button>
+    </form>
+
+    {% if image_url %}
+        <h2>Generated Image for: "{{ prompt }}"</h2>
+        <img src="{{ image_url }}" alt="Generated Image">
+    {% endif %}
+</body>
+</html>
